@@ -32,12 +32,7 @@ export default function Projects() {
 
     const [photoIndex, setActiveIndex] = useState(0);
     const [isOpen, setOpen] = useState(false);
-
-    const handleCLick = (index) => {
-        setActiveIndex(index)
-        setOpen(true);
-    }
-
+    
     const projectList = [
         {
             image: Image1,
@@ -89,7 +84,7 @@ export default function Projects() {
                         <h6 className="text-orange-600 text-base font-medium uppercase mb-2">Projects</h6>
                         <h3 className="mb-4 md:text-2xl text-xl font-medium dark:text-white">Our Works &amp; Projects</h3>
 
-                        <p className="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">Discover the excellence of LuliConstructionLtd through our diverse projects. From full renovations to bespoke extensions, and sophisticated kitchen and bathroom designs, each project highlights our dedication to quality and innovation. Experience our passion for craftsmanship in every detail.</p>
+                        <p className="text-slate-700 dark:text-slate-500 max-w-xl mx-auto">Discover the excellence of LuliConstructionLtd through our diverse projects. From full renovations to bespoke extensions, and sophisticated kitchen and bathroom designs, each project highlights our dedication to quality and innovation. Experience our passion for craftsmanship in every detail.</p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-6 mt-8">
@@ -99,10 +94,6 @@ export default function Projects() {
                                 <div className="absolute inset-0 group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
 
                                 <div className="content">
-                                    <div className="icon absolute z-10 opacity-0 group-hover:opacity-100 top-4 end-4 transition-all duration-500">
-                                        <Link to="#" onClick={() => handleCLick(index)} className="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white btn-icon rounded-full lightbox">
-                                            <i className="uil uil-camera"></i></Link>
-                                    </div>
                                     <div className="absolute z-10 opacity-0 group-hover:opacity-100 bottom-4 start-4 transition-all duration-500">
                                         <Link to="#" className="h6 text-md font-medium text-white hover:text-orange-600 transition duration-500">{item.title}</Link>
                                         <p className="text-slate-100 tag mb-0">{item.subtext}</p>

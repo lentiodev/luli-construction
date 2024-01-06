@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import DesignBlueprintImage from "../assets/images/svg/design-thinking.svg";
 import ConstructionSiteImage from "../assets/images/svg/coding.svg";
@@ -74,12 +73,8 @@ export default function Services() {
                 </div>
 
                 <div className="content mt-7">
-                  <Link to="#" className="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">{service.title}</Link>
+                  <div className="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">{service.title}</div>
                   <p className="text-slate-400 mt-3">{service.subtext}</p>
-
-                  <div className="mt-5">
-                    <Link to="#" className="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Learn More <i className="uil uil-arrow-right"></i></Link>
-                  </div>
                 </div>
               </div>
             ))}

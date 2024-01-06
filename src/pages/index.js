@@ -4,9 +4,7 @@ import { Link as Link2 } from "react-router-dom";
 
 import LogoLight from "../assets/images/darklog3.svg";
 import LogoDark from "../assets/images/logolight.svg";
-import Typed from "typed.js";
-
-import BackgroudImage from "../assets/images/bg/1.jpeg";
+import BackgroudImage from "../assets/images/bg/2.jpg";
 import Services from "../component/Services";
 import About from "../component/About";
 import Contact from "../component/Contact";
@@ -25,23 +23,6 @@ export default function HomePage() {
   const toggleMenu = () => {
     setMenu(!isOpen)
   }
-
-  setTimeout(() => {
-    new Typed("#typed", {
-      strings: [
-        "<b>Construction</b>",
-        "<b>Home Renovation</b>",
-        "<b>Building Extensions</b>",
-        "<b>Interior Design</b>",
-      ],
-      backDelay: 1000,
-      loop: true,
-      startDelay: 200,
-      typeSpeed: 80,
-      backSpeed: 80,
-    });
-  }, 500);
-
 
   /**
    * Window scroll
@@ -171,14 +152,6 @@ export default function HomePage() {
             <div className="grid grid-cols-1 mt-12">
               <h4 className="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium mb-7 position-relative">
               Excellence in Construction - Right Here in London.
-                Providing Brilliant Ideas <br />
-                For {" "}
-                <span
-                  className="typewrite relative text-type-element"
-                  id="typed"
-                  data-period="2000"
-                  data-type='[ "Construction", "Home Renovation", "Building Extensions", "Interior Design" ]'
-                ></span>
               </h4>
 
               <p className="text-[#fff] opacity-80 mb-0 max-w-2xl text-lg">
@@ -186,12 +159,16 @@ export default function HomePage() {
               </p>
 
               <div className="relative mt-10">
-                <Link2
-                  to="#"
+                <Link
+                  to="contact"
+                  activeclassname="active"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                   className="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md"
                 >
                   Let's Get Started
-                </Link2>
+                </Link>
               </div>
             </div>
           </div>
